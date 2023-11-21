@@ -1,0 +1,2 @@
+@ECHO OFF
+"C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\avrasm2.exe" -S "C:\Users\vasil\Documents\Microproc(MPS)\йспяюв\labels.tmp" -fI -W+ie -C V2E -o "C:\Users\vasil\Documents\Microproc(MPS)\йспяюв\8515lb1.hex" -d "C:\Users\vasil\Documents\Microproc(MPS)\йспяюв\8515lb1.obj" -e "C:\Users\vasil\Documents\Microproc(MPS)\йспяюв\8515lb1.eep" -m "C:\Users\vasil\Documents\Microproc(MPS)\йспяюв\8515lb1.map" "C:\Users\vasil\Documents\Microproc(MPS)\йспяюв\8515lb1.asm"

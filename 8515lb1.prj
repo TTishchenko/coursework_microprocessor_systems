@@ -1,0 +1,61 @@
+; ************************************************************
+; PROJECT:
+; AUTHOR:
+; ************************************************************
+
+; Micro + software running
+; ------------------------------------------------------------
+.MICRO "ATmega8515"
+.PROGRAM "8515lb1.asm"
+.TARGET "8515lb1.hex"
+
+.TRACE              ; Activate micro trace
+
+; Following lines are optional; if not included
+; exactly these values are taken by default
+; ------------------------------------------------------------
+.POWER VDD=5 VSS=0  ; Power nodes
+.CLOCK 4meg         ; Micro clock
+.STORE 250m         ; Trace (micro+signals) storage time
+
+; Micro nodes: RESET, PA0-PA7, PB0-PB7, PC0-PC7, PD0-PD7, PE0-PE2, ACO, TIM1OVF
+; Define here the hardware around the micro
+; ------------------------------------------------------------
+
+
+
+; ќписание кнопок
+k0 pd0 gnd monostable (10m) ; кнопка k0 в соединении с PD0 - START
+k1 pd1 gnd monostable (10m) ; кнопка k1 в соединении с PD1 - STOP
+
+; Эписание светодиодов
+d1 vdd a1 ; светодиод d1 контрольной панели
+R1 a1 pc0 560 ; сопротивление 560 Эм и соединение с PB0
+
+d2 vdd a2 ; светодиод d2 контрольной панели
+R2 a2 pc1 560 ; сопротивление 560 Эм и соединение с PB1
+
+d3 vdd a3 ; светодиод d3 контрольной панели
+R3 a3 pc2 560 ; сопротивление 560 Эм и соединение с PB2
+
+d4 vdd a4 ; светодиод d4 контрольной панели
+R4 a4 pc3 560 ; сопротивление 560 Эм и соединение с PB3
+
+d5 vdd a5 ; светодиод d5 контрольной панели
+R5 a5 pc4 560 ; сопротивление 560 Эм и соединение с PB4
+
+d6 vdd a6 ; светодиод d6 контрольной панели
+R6 a6 pc5 560 ; сопротивление 560 Эм и соединение с PB5
+
+d7 vdd a7 ; светодиод d7 контрольной панели
+R7 a7 pc6 560 ; сопротивление 560 Эм и соединение с PB6
+
+d8 vdd a8 ; светодиод d8 контрольной панели
+R8 a8 pc7 560 ; сопротивление 560 Эм и соединение с PB7
+
+.PLOT V(pc0) V(pc1) V(pc2) V(pc3) V(pc4) V(pc5) V(pc6) V(pc7) ; ¬ывести в scope все светодиоды
+
+
+
+
+
